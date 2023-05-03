@@ -11,4 +11,4 @@
 
     <!-- p-label injection -->
     <bean id="bookEntity" class="hk.hku.entity.BookEntity" p:bookName="p-label injection" p:bookPrice="24.00"></bean>
-</beans> 
+</beans>
