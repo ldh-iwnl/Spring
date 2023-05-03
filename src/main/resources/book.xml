@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--<bean id="bookEntity" class="hk.hku.entity.BookEntity">-->
+<!--    &lt;!&ndash; property is used to inject value to setter &ndash;&gt;-->
+<!--    <property name="bookName" value="S1mple"></property>-->
+<!--    <property name="bookPrice" value="108.00"></property>-->
+<!--</bean>-->
+
+    <!-- p-label injection -->
+    <bean id="bookEntity" class="hk.hku.entity.BookEntity" p:bookName="p-label injection" p:bookPrice="24.00"></bean>
+</beans> 
