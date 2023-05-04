@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="memberEntity" class="hk.hku.entity.MemberEntity" init-method="init" destroy-method="destroy">
+    <property name="name" value="Kyle" ></property>
+</bean>
+    <!-- register beanpostprocessor -->
+    <bean id="kylePostProcessor" class="hk.hku.bean.KylePostProcessor"></bean>
+    <bean id="kylePostProcessor02" class="hk.hku.bean.KylePostProcessor02"></bean>
+
+</beans>

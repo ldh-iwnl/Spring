@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- inject inside of bean -->
+    <bean id="empEntity" class="hk.hku.entity.EmpEntity">
+        <property name="name" value="John"></property>
+        <property name="age" value="30"></property>
+        <property name="deptEntity">
+            <bean id="deptEntity" class="hk.hku.entity.DeptEntity">
+                <property name="name" value="IT"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Inject Cascade Assignment-->
+    <bean id="empEntity2" class="hk.hku.entity.EmpEntity">
+        <property name="name" value="Mary"></property>
+        <property name="age" value="25"></property>
+        <property name="deptEntity" ref="deptEntity2"></property>
+    </bean>
+    <bean id="deptEntity2" class="hk.hku.entity.DeptEntity">
+        <property name="name" value="HR"></property>
+    </bean>
+</beans>

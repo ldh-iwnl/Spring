@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="stuEntity" class="hk.hku.entity.StuEntity">
+    <property name="list">
+        <list>
+            <value>John</value>
+            <value>Mary</value>
+            <value>Tom</value>
+        </list>
+    </property>
+    <property name="arrays">
+        <array>
+            <value>Kyle</value>
+            <value>Jack</value>
+            <value>Bob</value>
+        </array>
+    </property>
+    <property name="map">
+        <map>
+            <entry key="csgo" value="Counter Strike: Global Offensive"></entry>
+            <entry key="dota2" value="Dota 2"></entry>
+            <entry key="lol" value="League of Legends"></entry>
+        </map>
+    </property>
+    <property name="set">
+        <set>
+            <value>John</value>
+            <value>Mary</value>
+            <value>Tom</value>
+        </set>
+    </property>
+    <property name="courses">
+        <list>
+            <ref bean="courseEntity_java"></ref>
+            <ref bean="courseEntity_bigData"></ref>
+            <ref bean="courseEntity_python"></ref>
+        </list>
+    </property>
+
+    </bean>
+    <bean id="courseEntity_java" class="hk.hku.entity.CourseEntity">
+        <property name="name" value="Java"></property>
+    </bean>
+    <bean id="courseEntity_bigData" class="hk.hku.entity.CourseEntity">
+        <property name="name" value="BigData"></property>
+    </bean>
+    <bean id="courseEntity_python" class="hk.hku.entity.CourseEntity">
+        <property name="name" value="Python"></property>
+    </bean>
+
+
+</beans>
