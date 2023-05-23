@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- autowire
+    byName: inject by property name. warning: can only have one bean of the name
+    byType: inject by property type. warning: can only have one bean of the type
+    -->
+
+    <!-- Inject Cascade Assignment-->
+    <bean id="empEntity2" class="hk.hku.entity.EmpEntity" autowire="byType">
+
+    </bean>
+    <bean id="deptEntity2" class="hk.hku.entity.DeptEntity">
+        <property name="name" value="HR"></property>
+    </bean>
+</beans>
